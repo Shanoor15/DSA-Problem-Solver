@@ -1,7 +1,7 @@
 public class LargestSubarrayOnlyPositive {
 	public static void main(String[] args) {
-		int[] arr={1,2,3,1,1,1,1,4,2,3};
-		//int[] arr={2,0,0,0,3};
+		//int[] arr={1,2,3,1,1,1,1,4,2,3};
+		int[] arr={2,0,0,0,3};
 		int k=3;
 		int result=largestSubarray(arr,k);
 		System.out.println(result);
@@ -49,17 +49,17 @@ public class LargestSubarrayOnlyPositive {
 	
 	//3.Optimal Level
 	public static int largestSubarray(int[] arr,int k){
-	    int sum=0,max=0,leng=0,j=0;
-	    for(int i=0;i<arr.length;i++){
-	        sum+=arr[i];
-	        if(sum==k){
-	            leng=i-j+1;
-	            max=Math.max(max,leng);
-	        }
-	        if(sum>k){
+		int sum=arr[0],max=0,i=0,j=0;
+	    while(i<arr.length){
+	        while(j<=i && sum>k){
 	            sum-=arr[j];
 	            j++;
 	        }
+	        if(sum==k){
+	            max=Math.max(max,i-j+1);
+	        }
+	        i++;
+	        if(i<arr.length) sum+=arr[i];
 	    }
 	    return max;
 	}
