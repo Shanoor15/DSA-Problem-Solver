@@ -7,7 +7,7 @@ public class LargestSubarrayOnlyPositive {
 		System.out.println(result);
 	}
 	//1.Brute Level
-	/*public static int largestSubarray(int[] arr,int k){
+	public static int largestSubarray(int[] arr,int k){
 	    int max=0;
 	    for(int i=0;i<arr.length;i++){
 	        int count=0,largest=0;
@@ -23,7 +23,7 @@ public class LargestSubarrayOnlyPositive {
 	        max=Math.max(max,count);
 	    }
 	    return max;
-	}*/
+	}
 	
 	//2.Better Level
 /*	public static int largestSubarray(int[] arr,int k){
@@ -48,7 +48,7 @@ public class LargestSubarrayOnlyPositive {
 	}*/
 	
 	//3.Optimal Level
-	public static int largestSubarray(int[] arr,int k){
+	/*public static int largestSubarray(int[] arr,int k){
 		int sum=arr[0],max=0,i=0,j=0;
 	    while(i<arr.length){
 	        while(j<=i && sum>k){
@@ -62,6 +62,6 @@ public class LargestSubarrayOnlyPositive {
 	        if(i<arr.length) sum+=arr[i];
 	    }
 	    return max;
-	}
+	}*/
 
 }
