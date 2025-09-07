@@ -6,7 +6,7 @@ public class RemoveDuplicatesAtMostTwice {
 		int result=removeElement(arr,n);
 		System.out.println(result);
 	}
-	
+	//1.Brute Level
 	public static int removeElement(int[] arr,int n){
 	    int i=0;
 	    for(int num:arr){
