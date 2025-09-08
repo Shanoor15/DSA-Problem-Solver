@@ -24,7 +24,7 @@ public class RotateImage {
 	            ans[j][(n-1)-i]=matrix[i][j];
 	        }
 	    }
-	    // Copy ans back to matrix, Copies: 13, 9, 5, 1 -> replaces matrix[0]
+	    // Copy ans back to matrix--->without return type , Copies: 13, 9, 5, 1 -> replaces matrix[0]
 	    /*for(int i=0;i<n;i++){
 	        System.arraycopy(ans[i],0,matrix[i],0,n);
 	    }*/
