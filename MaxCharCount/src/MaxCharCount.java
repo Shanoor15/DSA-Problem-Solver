@@ -26,12 +26,20 @@ public class MaxCharCount {
 	}*/
 	
 	//All Characters(upper & lower) Characters
-	public static int maxCharCount(String s,char ch){
+	/*public static int maxCharCount(String s,char ch){
 	    int[] hash=new int[256];
 	    for(int i=0;i<s.length();i++){
 	        hash[s.charAt(i)]+=1;
 	    }
 	    return hash[ch];
-	}
+	}*/
 
+	//By using HashMap
+	public static int maxCharCount(String s,char ch){
+		HashMap<Character,Integer> map=new HashMap<>();
+		for(int i=0;i<s.length();i++) {
+			map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
+	}
+		return map.get(ch);
+	}
 }
