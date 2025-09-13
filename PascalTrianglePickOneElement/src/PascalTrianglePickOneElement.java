@@ -12,12 +12,12 @@ public class PascalTrianglePickOneElement {
 				{ 1, 6, 15, 20, 15, 6, 1 } 
 				};
 		int r = 7, ele = 5;
-		int result = funNCR(arr, r - 1, ele - 1);
+		long result = funNCR(arr, r - 1, ele - 1);
 		System.out.println(result);
 	}
 
-	public static int funNCR(int[][] arr, int r, int ele) {
-		int res = 1;
+	public static long funNCR(int[][] arr, int r, int ele) {
+		long res = 1;
 		for (int i = 0; i < ele; i++) {
 			res = res * (r - i);
 			res = res / (i + 1);
