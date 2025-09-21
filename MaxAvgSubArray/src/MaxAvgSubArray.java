@@ -22,7 +22,7 @@ public class MaxAvgSubArray {
 	    return max/k;
 	}*/
 	
-	//Optimal Level
+	//2.Optimal Level
 	public static int maxAvgSubArray(int[] arr,int k){
 	    int sum=0,n=arr.length;
 	    for(int i=0;i<k;i++){
