@@ -22,6 +22,7 @@ public class LongestSubString {
 	    return max;
 	}*/
 	
+	//2.Optimal Level
 	public static int longestSubString(String s){
 	    Set<Character> set=new HashSet<>();
 	    int max=0;
