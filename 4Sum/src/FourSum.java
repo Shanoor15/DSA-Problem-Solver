@@ -29,25 +29,26 @@ public class FourSum {
 	}*/
 
 	//2.Better Level
-	public static List<List<Integer>> fourSum(int[] arr,int target){
+		public static List<List<Integer>> fourSum(int[] arr,int target){
 		Set<List<Integer>> set=new HashSet<>();
 		int n=arr.length;
 		for(int i=0;i<n;i++) {
 			for(int j=i+1;j<n;j++) {
 				Set<Integer> newSet=new HashSet<>();
 				for(int k=j+1;k<n;k++) {
-					int l=-(arr[i]+arr[j]+arr[k]);
+					int l=target-(arr[i]+arr[j]+arr[k]);
 					if(newSet.contains(l)) {
-						List<Integer> ans=Arrays.asList(arr[i],arr[j],arr[j],l);
+						List<Integer> ans=Arrays.asList(arr[i],arr[j],arr[k],l);
 						Collections.sort(ans);
 						set.add(ans);
-						newSet.add(arr[k]);
-					}else {
-						newSet.add(arr[k]);
 					}
+						newSet.add(arr[k]);
 				}
 			}
 		}
 		return new ArrayList<>(set);
 	}
+	
+	
+
 }
