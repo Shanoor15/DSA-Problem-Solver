@@ -14,7 +14,7 @@ public class ThreeSum {
 		}
 	}
 	//1.Brute Level
-	public static List<List<Integer>> threeSum(int[] arr){
+	/*public static List<List<Integer>> threeSum(int[] arr){
 	    Set<List<Integer>> set=new HashSet<>();
 	    int n=arr.length;
 	    for(int i=0;i<n;i++){
@@ -29,12 +29,11 @@ public class ThreeSum {
 	        }
 	    }
 	    return new ArrayList<>(set); // convert Set to List before returning
-	}
+	}*/
 	
 	//2.Better Level
-	/*public static List<List<Integer>> threeSum(int[] arr){
+		public static List<List<Integer>> threeSum(int[] arr){
 	    Set<List<Integer>> set=new HashSet<>();
-	    List<List<Integer>> list=new ArrayList<>();
 	    int n=arr.length;
 	    for(int i=0;i<n;i++){
 	        Set<Integer> setEle=new HashSet<>();
@@ -51,7 +50,7 @@ public class ThreeSum {
 	        }
 	    }
 	    return new ArrayList<>(set);
-	}*/
+	}
 	
 	//3.Optimal Level
 	/*public static List<List<Integer>> threeSum(int[] arr){
