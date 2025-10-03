@@ -8,6 +8,7 @@ public class FourSum {
 		    System.out.println(list);
 		}
 	}
+	//1.Brute Level
 	public static List<List<Integer>> fourSum(int[] arr,int target){
 	    Set<List<Integer>> set=new HashSet<>();
 	    int n=arr.length;
@@ -17,14 +18,14 @@ public class FourSum {
 	                for(int l=k+1;l<n;l++){
 	                    if(arr[i]+arr[j]+arr[k]+arr[l]==target){
 	                        List<Integer> ans=Arrays.asList(arr[i],arr[j],arr[k],arr[l]);
-	                        Collections.sort(ans);
-	                        set.add(ans);
+	                        Collections.sort(ans);// sort so that [-1, 0, 0, 1] and [0,-1,1,0] look the same
+	                        set.add(ans);// actually store it in set
 	                    }
 	                }
 	            }
 	        }
 	    }
-	    return new ArrayList<>(set);
+	    return new ArrayList<>(set);// convert Set to List before returning
 	}
 
 }
