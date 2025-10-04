@@ -73,7 +73,7 @@ public class FourSum {
 					}
 					if(sum<target) {
 						k++;
-					}else if(sum>target) {
+					}else{
 						l--;
 					}
 				}
