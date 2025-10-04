@@ -43,10 +43,8 @@ public class ThreeSum {
 	                List<Integer> ans=Arrays.asList(arr[i],arr[j],k);
 	                Collections.sort(ans);
 	                set.add(ans);
-	                setEle.add(arr[j]);
-	            }else{
-	                setEle.add(arr[j]);
 	            }
+	                setEle.add(arr[j]);
 	        }
 	    }
 	    return new ArrayList<>(set);
