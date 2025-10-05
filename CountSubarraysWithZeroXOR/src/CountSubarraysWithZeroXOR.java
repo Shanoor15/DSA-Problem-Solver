@@ -7,7 +7,7 @@ public class CountSubarraysWithZeroXOR {
 		System.out.println(res);
 	}
 
-	private static int countSubarray(int[] arr,int target) {
+	/*private static int countSubarray(int[] arr,int target) {
 		int n=arr.length;
 		int count=0;
 		for(int i=0;i<n;i++) {
@@ -16,6 +16,20 @@ public class CountSubarraysWithZeroXOR {
 				for(int k=i;k<=j;k++) {
 					xor=xor^arr[k];
 				}
+				if(xor==target) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}*/
+	
+	private static int countSubarray(int[] arr,int target) {
+		int n=arr.length,count=0;
+		for(int i=0;i<n;i++) {
+			int xor=0;
+			for(int j=i;j<n;j++) {
+				xor^=arr[j];
 				if(xor==target) {
 					count++;
 				}
