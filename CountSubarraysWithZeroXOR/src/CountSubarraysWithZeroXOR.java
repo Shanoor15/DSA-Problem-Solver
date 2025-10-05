@@ -7,6 +7,7 @@ public class CountSubarraysWithZeroXOR {
 		System.out.println(res);
 	}
 
+	//1.Brute Level
 	/*private static int countSubarray(int[] arr,int target) {
 		int n=arr.length;
 		int count=0;
@@ -24,6 +25,7 @@ public class CountSubarraysWithZeroXOR {
 		return count;
 	}*/
 	
+	//2.Better Level
 	private static int countSubarray(int[] arr,int target) {
 		int n=arr.length,count=0;
 		for(int i=0;i<n;i++) {
