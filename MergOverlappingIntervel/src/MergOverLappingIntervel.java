@@ -17,6 +17,7 @@ public class MergOverLappingIntervel {
         }
     }
 
+    	//1.Brute Level
     	/*private static List<List<Integer>> mergeIntervals(int[][] arr) {
 		int n = arr.length;
 		Arrays.sort(arr, (a, b) -> a[0] - b[0]); 
@@ -63,7 +64,8 @@ public class MergOverLappingIntervel {
 		        
 		        return ans.toArray(new int[ans.size()][]);
 		    }*/
-    //2.
+    
+    //2.Better Level
     private static List<List<Integer>> mergeIntervals(int[][] arr) {
     	Arrays.sort(arr,(a,b)->a[0]-b[0]);
     	List<List<Integer>> ans=new ArrayList<>();
