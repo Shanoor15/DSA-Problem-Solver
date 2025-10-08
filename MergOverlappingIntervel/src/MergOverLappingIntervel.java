@@ -11,7 +11,7 @@ public class MergOverLappingIntervel {
             {15, 18},
             {16, 17}
         };
-        List<List<Integer>> res = mergeIntervals(arr); // ✅ changed return type
+        List<List<Integer>> res = mergeIntervals(arr);
         for (List<Integer> row : res) {
             System.out.println(row);
         }
