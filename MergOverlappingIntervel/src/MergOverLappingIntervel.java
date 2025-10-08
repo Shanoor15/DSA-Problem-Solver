@@ -46,8 +46,7 @@ public class MergOverLappingIntervel {
             for (int i = 0; i < n; i++) {
                 int start = arr[i][0];
                 int end = arr[i][1];
-                
-                // ✅ Corrected line: use [1] instead of get(1)
+              
                 if (!ans.isEmpty() && end <= ans.get(ans.size() - 1)[1]) {
                     continue;
                 }
