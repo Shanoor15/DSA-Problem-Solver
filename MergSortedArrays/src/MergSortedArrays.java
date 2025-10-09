@@ -30,18 +30,29 @@ public class MergSortedArrays {
 	    return ans;
 	}*/
 	
-	public static int[] mergSortArrays(int[] arr1,int[] arr2,int m,int n){
-        int left=m-1,right=n-1,k=m+n-1;
-        while(left>=0 && right>=0){
-            if(arr1[left]>arr2[right]){
-                arr1[k--]=arr1[left--];
-            }else{
-                arr1[k--]=arr2[right--];
-            }
-        }
-        while(right>=0){
-            arr1[k--]=arr2[right--];
-        }
+	//2.Better Level
+	/*public static int[] mergSortArrays(int[] arr1,int[] arr2,int n1,int n2){
+	int k=n1+n2-1;
+	for(int i=n2-1;i>=0;i--){
+	    arr1[k--]=arr2[i];
+	}
+	Arrays.sort(arr1);
+	return arr1;
+	}*/
+	
+	//3.Optimal Level
+		public static int[] mergSortArrays(int[] arr1,int[] arr2,int m,int n){
+	    int left=m-1,right=n-1,k=m+n-1;
+	    while(left>=0 && right>=0){
+	        if(arr1[left]>arr2[right]){
+	            arr1[k--]=arr1[left--];
+	        }else{
+	            arr1[k--]=arr2[right--];
+	        }
+	    }
+	    while(right>=0){
+	        arr1[k--]=arr2[right--];
+	    }
 	    return arr1;
 	}
 
