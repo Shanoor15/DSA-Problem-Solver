@@ -25,17 +25,27 @@ public class SingleNumber_II {
 }*/
 
     //2.Better Level
-    	public static int singleNumber(int[] arr){
-        Map<Integer,Integer> map=new HashMap<>();
-        for(int i=0;i<arr.length;i++){
-            map.put(arr[i],map.getOrDefault(arr[i],0)+1);
-        }
-         // Step 2: Find the number with frequency 1
-        for (int num : map.keySet()) {//num = 4
-        if (map.get(num) == 1) {//4=1
-            return num;
-            }
-        }
-        return -1;
-    }
+	/*public static int singleNumber(int[] arr){
+	Map<Integer,Integer> map=new HashMap<>();
+	for(int i=0;i<arr.length;i++){
+	    map.put(arr[i],map.getOrDefault(arr[i],0)+1);
+	}
+	 // Step 2: Find the number with frequency 1
+	for (int num : map.keySet()) {//num = 4
+	if (map.get(num) == 1) {//4=1
+	    return num;
+	    }
+	}
+	return -1;
+	}*/
+	
+	//3.Optimal Level
+	public static int singleNumber(int[] arr){
+		int one=0,two=0;
+		for(int num:arr) {
+			one=(one^num)&~two;
+			two=(two^num)&~one;
+		}
+		return one;
+	}
 }
