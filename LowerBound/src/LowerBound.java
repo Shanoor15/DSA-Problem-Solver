@@ -17,21 +17,19 @@ public class LowerBound {
 	    return -1;
 	}*/
 	
+	//2.Optimal Level
 	public static int lowerBound(int[] arr,int k){
-		int low=0,high=arr.length-1;
-		while(low<high) {
-			int mid=(low+high)/2;
-			if(arr[mid]==k) {
-				if(arr[mid-1]==arr[mid]) {
-					return mid-1;
-				}else {
-					return mid;
-				}
-			}
-			else if(arr[mid]>k) high=mid-1;
-			else low=mid+1;
-		}
-		return -1;
-	}
+        int n=arr.length,low=0,high=n-1;
+        int min=Integer.MAX_VALUE;
+        while(low<=high){
+            int mid=(low+high)/2;
+            if(arr[mid]>=k){
+                min=mid;
+                high=mid-1;
+            }
+            else low=mid+1;
+        }
+        return min;
+    }
 
 }
