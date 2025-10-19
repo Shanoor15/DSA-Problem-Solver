@@ -20,7 +20,7 @@ public class LowerBound {
 	//2.Optimal Level
 	public static int lowerBound(int[] arr,int k){
         int n=arr.length,low=0,high=n-1;
-        int min=Integer.MAX_VALUE;
+        int min=n;
         while(low<=high){
             int mid=(low+high)/2;
             if(arr[mid]>=k){
