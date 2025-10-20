@@ -21,6 +21,25 @@ public class FloorAndCeilOfArray {
 		return new int[] {flore,ceil};
 	}*/
 	
+	//ceil
+	/*public static int fcArray(int[] arr,int target) {
+		int low=0,high=arr.length-1;
+		int ans=-1;
+		while(low<=high) {
+			int mid=(low+high)/2;
+			if(arr[mid]>=target) {
+				return arr[mid];
+				
+			}
+			if(arr[mid]>target) high=mid-1;
+			else {
+				low=mid+1;
+			}
+		}
+		return ans;
+	}*/
+	
+	//Floor
 	public static int fcArray(int[] arr,int target) {
 		int low=0,high=arr.length-1;
 		int ans=-1;
@@ -29,7 +48,8 @@ public class FloorAndCeilOfArray {
 			if(arr[mid]<=target) {
 				ans=arr[mid];
 				low=mid+1;
-			}else {
+			}
+			else {
 				high=mid-1;
 			}
 		}
