@@ -21,7 +21,8 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
 	    return new int[]{first,second};
 	}*/
 	
-	public static int[] searchRange(int[] arr,int k) {
+	//2.Better Level
+	/*public static int[] searchRange(int[] arr,int k) {
 		int low=lowerBound(arr,k);
 	    if(arr[low]!=k) return new int[]{-1,-1};
 	    int up=upperBound(arr,k);
@@ -52,6 +53,46 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
 	        }
 	        else{
 	            low=mid+1;
+	        }
+	    }
+	    return second;
+	}*/
+	
+	//3,Optimal Level
+	public static int[] searchRange(int[] arr,int k){
+	    int n=arr.length;
+	    int low=lowerBound(arr,k,n);
+	    if(low==-1) return new int[]{-1,-1};
+	    int up=upperBound(arr,k,n);
+	    return new int[]{low,up};
+	}
+	public static int lowerBound(int[] arr,int k,int n){
+	    int low=0,high=n-1,first=-1;
+	    while(low<=high){
+	        int mid=(low+high)/2;
+	        if(arr[mid]==k){
+	            first=mid;
+	            high=mid-1;
+	        }else if(arr[mid]<k){
+	            low=mid+1;
+	        }else{
+	            high=mid-1;
+	        }
+	    }
+	    return first;
+	}
+	
+	public static int upperBound(int[] arr,int k,int n){
+	    int low=0,high=arr.length-1,second=-1;
+	    while(low<=high){
+	        int mid=(low+high)/2;
+	        if(arr[mid]==k){
+	            second=mid;
+	            low=mid+1;
+	        }else if(arr[mid]<k){
+	            low=mid+1;
+	        }else{
+	            high=mid-1;
 	        }
 	    }
 	    return second;
