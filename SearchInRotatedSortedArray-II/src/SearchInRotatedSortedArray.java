@@ -6,6 +6,7 @@ public class SearchInRotatedSortedArray {
 		boolean res=search(arr,target);
 		System.out.println(res);
 	}
+	//1.Better Level
 	/*public static boolean search(int[] arr,int target){
 	    for(int i=0;i<arr.length;i++){
 	        if(arr[i]==target){
@@ -15,6 +16,7 @@ public class SearchInRotatedSortedArray {
 	    return false;
 	}*/
 	
+	//2.Optimal Level
 	public static boolean search(int[] arr,int target){
 		 int low=0,high=arr.length-1;
 	        while(low<=high){
