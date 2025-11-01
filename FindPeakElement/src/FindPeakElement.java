@@ -45,6 +45,7 @@ public class FindPeakElement {
 	    return 0;
 	}*/
 	
+	//3.Optimal Level
 	public static int findPeak(int[] arr) {
 		int n=arr.length;
 		int low=1,high=n-2;
