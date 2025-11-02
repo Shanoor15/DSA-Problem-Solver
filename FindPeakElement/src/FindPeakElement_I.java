@@ -1,5 +1,5 @@
 //If array Contain only one peak
-public class FindPeakElement {
+public class FindPeakElement_I {
 
 	public static void main(String[] args) {
 		//int[] arr= {1,2,1,3,5,6,4};
@@ -40,7 +40,7 @@ public class FindPeakElement {
 	/*public static int findPeak(int[] arr) {
 		int n=arr.length;
 	    for(int i=0;i<n;i++){
-	        if(((i==0)||(arr[i-1]<arr[i])) && ((i==n-1)||(arr[i]>arr[i+1])))
+	        if((i==0||arr[i-1]<arr[i]) && (i==n-1||arr[i]>arr[i+1]))
 	        	return i;
 	    }
 	    return 0;
