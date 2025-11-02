@@ -1,11 +1,12 @@
-
+//If array Contain only one peak
 public class FindPeakElement {
 
 	public static void main(String[] args) {
 		//int[] arr= {1,2,1,3,5,6,4};
 		//int[] arr= {1,2,3,4,5};
 		//int[] arr={1,2,1,3,5,6,4};
-		int[] arr= {2,1};
+		int[] arr= {1,4,3,8,5};//==>this array has more than one peaks it not work for this
+		//int[] arr= {2,1};
 		int res=findPeak(arr);
 		System.out.println(res);
 	}
@@ -58,7 +59,7 @@ public class FindPeakElement {
 				return mid;
 			}else if(arr[mid-1]<arr[mid]) {
 				low=mid+1;
-			}else {
+			}else if(arr[mid]>arr[mid+1]){
 				high=mid-1;
 			}
 		}
