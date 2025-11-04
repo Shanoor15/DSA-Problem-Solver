@@ -7,6 +7,12 @@ public class ValidPerfectSquare {
 	}
 	//1.Brute Level
 	/*public static boolean findPerfect(int n) {
+		int sqrt=(int)Math.sqrt(n);
+		return sqrt*sqrt==n;
+	}*/
+	
+	//1.Brute Level
+	/*public static boolean findPerfect(int n) {
 		for(int i=1;i<=n;i++){
 	        if(i*i==n){
 	            return true;
@@ -26,8 +32,11 @@ public class ValidPerfectSquare {
 	}*/
 	
 	//3.Optimal Level
-	public static boolean findPerfect(int n) {
-		int low=1,high=n;
+		public static boolean findPerfect(int n) {
+		if (n < 2)
+	        return true;
+		
+		int low=1,high=n/2;
 		while(low<=high) {
 			int mid=low+(high-low)/2;
 			Long value=(long)mid*mid;
