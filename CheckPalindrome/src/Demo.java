@@ -5,6 +5,8 @@ public class Demo {
 		boolean result=palindrome(n);
 		System.out.println(result);
 	}
+	
+	
 	//1.Brute Level
 	/*public static boolean palindrome(int n) {
 		char[] c=String.valueOf(n).toCharArray();
